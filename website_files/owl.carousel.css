@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+  .owl-carousel .owl-wrapper .owl-item {
+    display: inline-block !important;
+    transition: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+
+  .owl-carousel .owl-wrapper .owl-item {
+    display: flex !important; /* Ensure individual logos are flex containers */
+    transition: none !important; /* Remove transitions */
+    opacity: 1 !important; /* Ensure full opacity */
+    transform: translateX(26.5%);
+    display: flex;
+  }
+}

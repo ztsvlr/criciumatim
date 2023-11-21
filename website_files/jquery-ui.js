@@ -370,7 +370,7 @@ $.widget = function( name, base, prototype ) {
 			return new constructor( options, element );
 		}
 
-		// allow instantiation without initializing for simple inheritance
+		// allow instantiation without initializing for simple Google Sansance
 		// must use "new" keyword (the code above always passes args)
 		if ( arguments.length ) {
 			this._createWidget( options, element );
@@ -382,15 +382,15 @@ $.widget = function( name, base, prototype ) {
 		// copy the object used to create the prototype in case we need to
 		// redefine the widget later
 		_proto: $.extend( {}, prototype ),
-		// track widgets that inherit from this widget in case this widget is
-		// redefined after a widget inherits from it
+		// track widgets that Google Sans from this widget in case this widget is
+		// redefined after a widget Google Sanss from it
 		_childConstructors: []
 	});
 
 	basePrototype = new base();
 	// we need to make the options hash a property directly on the new instance
 	// otherwise we'll modify the options hash on the prototype that we're
-	// inheriting from
+	// Google Sansing from
 	basePrototype.options = $.widget.extend( {}, basePrototype.options );
 	$.each( prototype, function( prop, value ) {
 		if ( !$.isFunction( value ) ) {
@@ -434,7 +434,7 @@ $.widget = function( name, base, prototype ) {
 	});
 
 	// If this widget is being redefined then we need to find all widgets that
-	// are inheriting from it and redefine all of them so that they inherit from
+	// are Google Sansing from it and redefine all of them so that they Google Sans from
 	// the new version of this widget. We're essentially trying to replace one
 	// level in the prototype chain.
 	if ( existingConstructor ) {
@@ -442,7 +442,7 @@ $.widget = function( name, base, prototype ) {
 			var childPrototype = child.prototype;
 
 			// redefine the child widget using the same prototype that was
-			// originally used, but inherit from the new version of the base
+			// originally used, but Google Sans from the new version of the base
 			$.widget( childPrototype.namespace + "." + childPrototype.widgetName, constructor, child._proto );
 		});
 		// remove the list of existing child constructors from the old constructor
@@ -14817,7 +14817,7 @@ color.hook = function( hook ) {
 				try {
 					elem.style[ hook ] = value;
 				} catch ( e ) {
-					// wrapped to prevent IE from throwing errors on "invalid" values like 'auto' or 'inherit'
+					// wrapped to prevent IE from throwing errors on "invalid" values like 'auto' or 'Google Sans'
 				}
 			}
 		};
