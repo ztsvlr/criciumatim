@@ -5,17 +5,23 @@ import { ThemeToggle } from "./ThemeToggle";
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center justify-between">
-        <div className="flex items-center gap-8">
+      <div className="container flex h-20 items-center justify-between px-4 sm:px-0">
+        <div className="flex items-center gap-4 sm:gap-8">
           <a href="/" className="flex items-center space-x-2 group">
+            {/* Logo — só aparece em telas médias pra cima */}
             <img
               src="/images/tim-business-partner.png"
               alt="TIM Business Partner"
-              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="hidden sm:block h-10 w-auto transition-transform duration-300 group-hover:scale-105"
             />
+            {/* Textos — sempre visíveis */}
             <div className="flex flex-col">
-              <span className="font-bold text-lg text-foreground">Sergio Dias</span>
-              <span className="text-xs text-muted-foreground">Consultor TIM Empresas</span>
+              <span className="font-bold text-base sm:text-lg text-foreground leading-tight">
+                Sergio Dias
+              </span>
+              <span className="text-[10px] sm:text-xs text-muted-foreground leading-tight">
+                Consultor TIM Empresas
+              </span>
             </div>
           </a>
         </div>
